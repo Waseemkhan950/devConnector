@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const config = require("config");
 const db = config.get("mongoUrl");
-const dbConnection = async () => {
+async function dbConnection() {
       try {
             await mongoose.connect(db);
             console.log("mongodb connected successfully");
@@ -9,5 +9,5 @@ const dbConnection = async () => {
             console.error(err.message);
             process.exit(1);
       }
-};
+}
 module.exports = dbConnection;
