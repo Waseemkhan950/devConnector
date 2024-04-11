@@ -9,6 +9,9 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 //to access secret and confidentail information
 const config = require("../../config/default.json");
+//@route Post api/users
+//@access public
+//desc register user
 router.post(
       "/", //route
       [
