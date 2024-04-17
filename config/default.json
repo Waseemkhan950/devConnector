@@ -1,5 +1,5 @@
 {
-      "mongoUrl": "mongodb://127.0.0.1:27017/devconnector",
+      "mongoUrl": "mongodb+srv://waseemadil950:k6tb4uaJWaMCIp8e@cluster0.rbo3kjc.mongodb.net/devconnector",
       "jwtSecret": "AryanAliKhanLakhwera",
       "githubClientId": "4ee8157f0d8e430dde81",
       "githubClientSecret": "5011b296aa983831c447882550258ccc454c409d"
