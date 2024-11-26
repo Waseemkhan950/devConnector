@@ -1,5 +1,5 @@
 {
-      "mongoUrl": "mongodb+srv://waseemadil950:k6tb4uaJWaMCIp8e@cluster0.rbo3kjc.mongodb.net/devconnector",
+      "mongoUrl": "mongodb+srv://waseemadil:Lakhwera950$@cluster0.qc5ly.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
       "jwtSecret": "AryanAliKhanLakhwera",
       "githubClientId": "4ee8157f0d8e430dde81",
       "githubClientSecret": "5011b296aa983831c447882550258ccc454c409d"
