@@ -6,20 +6,19 @@ const config = require("../config/default.json");
  if he does not have a valid token, he is denied the access of that specific route.*/
 
 module.exports = function (req, res, next) {
-      //get token from header, as user sends token in header in each of his request
-      const token = req.header("x-auth-token");
-      //check if token not present
-      if (!token) {
-            return res
-                  .status(401)
-                  .json({ msg: "No token, authorization denied" });
-      }
-      // varify token
-      try {
-            const decoded = jwt.verify(token, config.jwtSecret);
-            req.user = decoded.user;
-            next(); // if the user is verified next() allow the user to access the route
-      } catch (err) {
-            res.status(401).json({ msg: "Token is not valid" });
-      }
+	//get token from header, as user sends token in header in each of his request
+	const token = req.header("x-auth-token");
+	//check if token not present
+	if (!token) {
+		return res.status(401).json({ msg: "No token, authorization denied" });
+	}
+	// varify token
+	try {
+		const decoded = jwt.verify(token, config.jwtSecret);
+		// req.user will contain a user object which could be accessed in any route using auth middleware
+		req.user = decoded.user;
+		next(); // if the user is verified next() allow the access to next middleware/code
+	} catch (err) {
+		res.status(401).json({ msg: "Token is not valid" });
+	}
 };
